@@ -44,18 +44,21 @@ analyses). You are encourages to define the `MOPI_MOVIES_DIR` and the
 - `plot_MRI_quality_factor`, plot the ratio between the wavelength of the
   magneto-rotational instability and the local resolution of the grid. It requires
   a thorn that computes `MRI_lambda`.
-- `print_available_timeseries`, prints the list of timeseries that can `kuibit`
+- `print_available_timeseries`, print the list of timeseries that can `kuibit`
   can access.
-- `print_available_iterations`, prints the list of iterations available for a given
+- `print_available_iterations`, print the list of iterations available for a given
   variable.
-- `print_time_formation_ah`, prints the time of formation of a given apparent
+- `print_time_formation_ah`, print the time of formation of a given apparent
   horizon.
+- `save_reasampled_grid_data`, read a grid functions, resamples it to a given grid,
+  and save it to a file.
+
 
 ## Mopi_movies avaialble
 
-- `1d_vars`, plots a 1D variable as a function of time.
-- `grid_var`, plots a 2D variable as a function of time.
-- `binary_black_holes`, plots a binary inspiral (see gif below).
+- `1d_vars`, plot a 1D variable as a function of time.
+- `grid_var`, plot a 2D variable as a function of time.
+- `binary_black_holes`, plot a binary inspiral (see gif below).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Sbozzolo/kuibit/experimental/examples/bbh.gif">
