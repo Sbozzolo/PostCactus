@@ -275,6 +275,8 @@ class TestOneGridFunction(unittest.TestCase):
         # There's only one file
         self.P_file = self.P.allfiles[0]
 
+        self.alp = sd.SimDir("tests/grid_functions").gf.xyz["alp"]
+
     # This is to make coverage happy and test the abstract methods
     # There's no real test here
     @mock.patch.multiple(cg.BaseOneGridFunction, __abstractmethods__=set())
@@ -304,10 +306,10 @@ class TestOneGridFunction(unittest.TestCase):
 
     def test_restarts(self):
 
-        # TODO: This test is not robust when we are dealing with only one file...
-        #       Add a second file and rewrite tests.
-
         self.assertCountEqual(self.P.restarts, [(0, 2, [self.P_file])])
+        self.assertCountEqual(
+            self.alp.restarts, [(55296, 55296, self.alp.allfiles)]
+        )
 
     def test_iterations(self):
 

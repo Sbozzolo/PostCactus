@@ -237,8 +237,8 @@ class BaseOneGridFunction(ABC):
             # If we have exactly the same iterations, we are looking at ones
             # of those 3D files, so we collect them
             if (min_iteration, max_iteration) == (ret[-1][0], ret[-1][1]):
-                ret[-1][2].append(path)
-                break
+                ret[-1][2].extend(path)
+                continue
 
             max_iteration_in_ret = ret[-1][1]
             if max_iteration > max_iteration_in_ret:
