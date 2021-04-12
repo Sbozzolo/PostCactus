@@ -50,8 +50,10 @@ analyses). You are encourages to define the `MOPI_MOVIES_DIR` and the
   variable.
 - `print_time_formation_ah`, print the time of formation of a given apparent
   horizon.
-- `save_reasampled_grid_data`, read a grid functions, resamples it to a given grid,
+- `save_reasampled_grid_data`, read a grid function, resamples it to a given grid,
   and save it to a file.
+- `load_data_in_mlab`, read a grid function from a file, draw the contour plot, and
+  open an interactive `mayavi` session.
 
 
 ## Mopi_movies avaialble
