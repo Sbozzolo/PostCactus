@@ -2,6 +2,7 @@
 <img src="https://github.com/Sbozzolo/kuibit/raw/master/logo.png" height="120">
 </p>
 
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.03099/status.svg)](https://doi.org/10.21105/joss.03099)
 [![codecov](https://codecov.io/gh/Sbozzolo/kuibit/branch/master/graph/badge.svg)](https://codecov.io/gh/Sbozzolo/kuibit)
 ![Tests](https://github.com/Sbozzolo/kuibit/workflows/Tests/badge.svg)
 ![Documentation](https://github.com/Sbozzolo/kuibit/workflows/Document/badge.svg)
@@ -133,3 +134,25 @@ the original code, adding emphasis on documentation, testing, and extensibility.
 The logo contains elements designed by [freepik.com](freepik.com). We thank
 ``kuibit`` first users, Stamatis Vretinaris and Pedro Espino, for providing
 comments to improve the code and the documentation.
+
+## Citation
+
+`kuibit` is built and maintained by the dedication of one graduate student. Please,
+consider citing `kuibit` if you find the software useful. You can use the following
+`bibtex` key.
+``` bibtex
+@article{kuibit,
+  doi = {10.21105/joss.03099},
+  url = {https://doi.org/10.21105/joss.03099},
+  year = {2021},
+  publisher = {The Open Journal},
+  volume = {6},
+  number = {60},
+  pages = {3099},
+  author = {Gabriele Bozzola},
+  title = {kuibit: Analyzing Einstein Toolkit simulations with Python},
+  journal = {Journal of Open Source Software},
+  version = {1.0.0}
+}
+```
+
