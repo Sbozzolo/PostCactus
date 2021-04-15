@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kuibit"
-version = "1.1.0-alpha.4"
+version = "1.1.0-alpha.5"
 description = "Read and analyze Einstein Toolkit simulations."
 authors = ["Gabriele Bozzola <gabrielebozzola@arizona.edu>"]
 maintainers = ["Gabriele Bozzola <gabrielebozzola@arizona.edu>"]
@@ -17,7 +17,7 @@ documentation = "https://sbozzolo.github.io/kuibit"
 python = "^3.6"
 numpy = "^1.18.5"
 scipy = "^1.5.2"
-h5py = ">=2.10.0"
+h5py = ">=2.9.0"
 matplotlib = ">=2.0.0"
 ConfigArgParse = "^1.2.3"
 motionpicture = "^0.1.0"

@@ -1647,7 +1647,7 @@ with_tikz = ["tikzplotlib"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "bbedc5d982bbb19fe20f4fc0804f83aeb3fd0dc71f215d147b74cd9df201dda2"
+content-hash = "449f07a4c3c0539f579af0cb2468334840f2beead18abaf14cd99f16ea446d3c"
 
 [metadata.files]
 alabaster = [
