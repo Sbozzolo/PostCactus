@@ -6,6 +6,7 @@
 [![codecov](https://codecov.io/gh/Sbozzolo/kuibit/branch/master/graph/badge.svg)](https://codecov.io/gh/Sbozzolo/kuibit)
 ![Tests](https://github.com/Sbozzolo/kuibit/workflows/Tests/badge.svg)
 ![Documentation](https://github.com/Sbozzolo/kuibit/workflows/Document/badge.svg)
+![Publish](https://github.com/Sbozzolo/kuibit/workflows/Publish/badge.svg)
 [![GPLv3
 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 [![Get help on Telegram](https://img.shields.io/badge/Get%20help%20on-Telegram-blue.svg)](https://t.me/kuibit)

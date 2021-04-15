@@ -20,12 +20,14 @@ scipy = "^1.5.2"
 h5py = ">=2.10.0"
 matplotlib = ">=2.0.0"
 ConfigArgParse = "^1.2.3"
-motionpicture = { git = "https://github.com/Sbozzolo/motionpicture.git", optional = true }
+motionpicture = "^0.1.0"
+# motionpicture = { git = "https://github.com/Sbozzolo/motionpicture.git", optional = true }
 numba = { version = "^0.51.2", optional = true }
 lalsuite = { version = "^6.77", optional = true }
 pycbc = { version = "^1.16.10", optional = true }
 tikzplotlib =  { version = "^0.9.5", optional = true }
-ciak = { git = "https://github.com/Sbozzolo/ciak.git", branch = "main", optional = true }
+ciak = "^0.1.0.dev0"
+# ciak = { git = "https://github.com/Sbozzolo/ciak.git", branch = "main", optional = true }
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
