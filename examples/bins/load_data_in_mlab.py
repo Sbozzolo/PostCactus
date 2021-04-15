@@ -19,6 +19,7 @@ import logging
 import os
 
 from mayavi import mlab
+from numpy import log10
 
 from kuibit.simdir import SimDir
 from kuibit import argparse_helper as pah
@@ -45,6 +46,12 @@ if __name__ == "__main__":
         help="File with the data",
     )
 
+    parser.add_argument(
+        "--logscale",
+        action='store_true',
+        help="Take the log in base 10",
+    )
+
     args = pah.get_args(parser)
 
     # Parse arguments
@@ -60,8 +67,10 @@ if __name__ == "__main__":
     if data.num_dimensions != 3:
         raise RuntimeError("This script works only with 3D data")
 
+    data_array = log10(data.data) if args.logscale else data.data
+
     mlab.contour3d(*data.coordinates_from_grid(as_same_shape=True),
-                   data.data,
+                   data_array,
                    transparent=True)
 
     if (args.ah_show):
