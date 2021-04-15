@@ -608,6 +608,8 @@ class TestUniformGridData(unittest.TestCase):
         grid_file_bz = "test_save_grid.dat.bz2"
         grid_file_gz = "test_save_grid.dat.gz"
 
+        grid_file_npz = "test_save_grid.dat.npz"
+
         def square(x, y):
             return x * y
 
@@ -640,6 +642,15 @@ class TestUniformGridData(unittest.TestCase):
 
         # Clean up file
         os.remove(grid_file_gz)
+
+        # Test npz
+        grid_data.save(grid_file_npz)
+        loaded_npz = gdu.load_UniformGridData(grid_file_npz)
+
+        self.assertEqual(loaded_npz, grid_data)
+
+        # Clean up file
+        os.remove(grid_file_npz)
 
     def test_splines(self):
 

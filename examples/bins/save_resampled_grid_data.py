@@ -86,7 +86,7 @@ if __name__ == "__main__":
         raise ValueError(f"x1 ({args.corner}) and type ({args.type}) are incompatible")
 
     if args.outname is None:
-        outname = f"{args.variable}_{args.type}.dat.gz"
+        outname = f"{args.variable}_{args.type}.npz"
     else:
         outname = args.outname
 
