@@ -47,6 +47,12 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
+        "--vector-files",
+        nargs=3,
+        help="Files with the vector field data",
+    )
+
+    parser.add_argument(
         "--logscale",
         action='store_true',
         help="Take the log in base 10",
@@ -72,6 +78,14 @@ if __name__ == "__main__":
     mlab.contour3d(*data.coordinates_from_grid(as_same_shape=True),
                    data_array,
                    transparent=True)
+
+    if args.vector_files:
+        vec_x = load_UniformGridData(args.vector_files[0])
+        vec_y = load_UniformGridData(args.vector_files[1])
+        vec_z = load_UniformGridData(args.vector_files[2])
+
+        mlab.quiver3d(*vec_x.coordinates_from_grid(as_same_shape=True),
+                      vec_x.data, vec_y.data, vec_z.data)
 
     if (args.ah_show):
         sim = SimDir(args.datadir, ignore_symlinks=args.ignore_symlinks)
