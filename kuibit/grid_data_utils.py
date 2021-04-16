@@ -168,8 +168,10 @@ def load_UniformGridData(path, *args, **kwargs):
         # We read everything, then we split off the data and rename
         # what is left as metadata
         grid_details = np.load(path)
-        data = grid_details['data']
-        metadata = {key: value for key, value in grid_details.items() if key != "data"}
+        data = grid_details["data"]
+        metadata = {
+            key: value for key, value in grid_details.items() if key != "data"
+        }
     else:  # ASCII
         # We read the header to fill in the grid information
         # The colon separates data from description

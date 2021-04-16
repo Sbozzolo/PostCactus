@@ -652,6 +652,22 @@ class TestUniformGridData(unittest.TestCase):
         # Clean up file
         os.remove(grid_file_npz)
 
+        # Now let's consider a case with also time and iteration. These are
+        # treated differently
+        grid_file_npz_ti = "test_save_grid_ti.dat.npz"
+
+        grid_data_ti = gdu.sample_function(square, [100, 200], [0, 1], [1, 2],
+                                           time=1, iteration=2)
+
+        grid_data_ti.save(grid_file_npz_ti)
+        loaded_npz_ti = gdu.load_UniformGridData(grid_file_npz_ti)
+
+        self.assertEqual(loaded_npz_ti, grid_data_ti)
+
+        # Clean up file
+        os.remove(grid_file_npz_ti)
+
+
     def test_splines(self):
 
         # Let's start with 1d.
@@ -1557,7 +1573,9 @@ class TestHierarchicalGridData(unittest.TestCase):
 
         # We redefine this to be ref_level=1
         grid1 = gd.UniformGrid([4, 5], x0=[0, 1], x1=[3, 5], ref_level=1)
-        grid2 = gd.UniformGrid([11, 21], x0=[4, 6], x1=[14, 26], ref_level=1)
+        grid2 = gd.UniformGrid(
+            [11, 21], x0=[4, 6], x1=[14, 26], ref_level=1, component=1
+        )
 
         grids = [grid1, grid2]
 
