@@ -2207,11 +2207,11 @@ class HierarchicalGridData(BaseNumerical):
         # highest resolution first
         all_components = sorted(
             self.all_components,
-            key=lambda comp: (-comp.ref_level, -comp.component),
+            key=lambda comp: (-comp.ref_level, comp.component),
         )
 
-        half_dx_finest = self.finest_dx / 2.0
-        origin = self[self.num_finest_level][0].x0
+        half_dx_finest = all_components[0].dx / 2.0
+        origin = all_components[0].x0
 
         def to_tilde(x):
             """Convert a coordinate to tilde coordinate system (based on the first
@@ -2296,7 +2296,10 @@ class HierarchicalGridData(BaseNumerical):
 
         def get_component(coordinate):
             """Map a coordinate to the component that contains it."""
-            x_tilde = to_tilde(coordinate)
+
+            # This is like to_tilde, but we floor instead of rounding.
+            # God knows why.
+            x_tilde = np.floor((coordinate - origin) / half_dx_finest)
 
             if any(
                 [
